@@ -1,17 +1,21 @@
 class Api::V1::CatsController < ApplicationController
 
-    before_action :find_note, only: [:update, :show, :destroy]
+    before_action :find_cat, only: [:update, :show, :destroy]
     def index
       @cats = Cat.all
       render json: @cats
     end
 
     def update
-      @cat.update(cat_params)
-      if @cat.save
+      @mark = @cat.mark
+      @mark.assassin = Assassin.all.find do |assassin|
+        assassin.cat_food.id == params[:cat_food_id].to_i
+      end
+
+      if @mark.save
         render json: @cat, status: :accepted
       else
-        render json: { errors: @cat.errors.full_messages }, status: :unprocessible_entity
+        render json: { errors: @mark.errors.full_messages }, status: :unprocessible_entity
       end
     end
 

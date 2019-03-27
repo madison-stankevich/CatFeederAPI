@@ -17,3 +17,7 @@ assassin.create_cat_food(name: "Friskies", image_url: "https://www.dollargeneral
 mark = assassin.marks.create(name: "Frank", image_url: "https://i.pinimg.com/236x/4a/63/10/4a6310b5f4868d394aff9eb81a2a4645--frank-sinatra-mugshot-celebrity-mugshots.jpg", description: "a singer")
 
 mark.create_cat(name: "fluffy", image_url: "https://ichef.bbci.co.uk/images/ic/720x405/p0517py6.jpg", description: "very fluffy")
+
+assassin2 = Assassin.create(name: "James Bond", image_url: "https://images-i.jpimedia.uk/imagefetch/c_fill,f_auto,h_640,q_auto:eco,w_960/https://inews.co.uk/wp-content/uploads/2017/05/james-bond.jpg", description: "The name is Bond. James bond")
+
+assassin2.create_cat_food(name: "Canned Tuna", image_url: "http://static1.squarespace.com/static/596fb734c534a5fa937b7e75/5ab0164003ce6497ede5c48a/5aa9b6cf71c10b19376b5122/1521071850333/FP222_Tuna+Can.jpg", description: "Chicken of the sea.")
