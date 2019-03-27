@@ -1,6 +1,6 @@
 class Api::V1::MarksController < ApplicationController
 
-  before_action :find_note, only: [:update, :show, :destroy]
+  before_action :find_mark, only: [:update, :show, :destroy]
   def index
     @marks = Mark.all
     render json: @marks
@@ -35,7 +35,7 @@ class Api::V1::MarksController < ApplicationController
   private
 
   def mark_params
-    params.permit(:name, :image_url, :description, :assassin_id)
+    params.permit(:name, :image_url, :description, :assassin_id, :alive)
   end
 
   def find_mark
