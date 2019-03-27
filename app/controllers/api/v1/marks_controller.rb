@@ -24,7 +24,7 @@ class Api::V1::MarksController < ApplicationController
   end
 
   def create
-    @mark = Mark.create(mark_params)
+    @mark = Mark.new(mark_params)
     if @mark.save
       render json: @mark, status: :accepted
     else
@@ -35,7 +35,7 @@ class Api::V1::MarksController < ApplicationController
   private
 
   def mark_params
-    params.permit(:name, :image_url, :description, :alive)
+    params.permit(:name, :image_url, :description, :assassin_id)
   end
 
   def find_mark

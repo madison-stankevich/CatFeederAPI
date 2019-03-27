@@ -26,20 +26,24 @@ class Api::V1::CatsController < ApplicationController
     def destroy
       @cat.destroy
     end
-    #
-    # def create
-    #   @cat = Cat.create(cat_params)
-    #   if @cat.save
-    #     render json: @cat, status: :accepted
-    #   else
-    #     render json: { errors: @cat.errors.full_messages }, status: :unprocessible_entity
-    #   end
-    # end
+
+    def create
+      @mark = @cat.mark
+      @mark.assassin = Assassin.all.find do |assassin|
+        assassin.cat_food.id == params[:cat_food_id].to_i
+      end
+      @cat = Cat.create(cat_params)
+      if @cat.save
+        render json: @cat, status: :accepted
+      else
+        render json: { errors: @cat.errors.full_messages }, status: :unprocessible_entity
+      end
+    end
 
     private
 
     def cat_params
-      params.permit(:alive)
+      params.permit(:description, :name, :image_url)
     end
 
     def find_cat
