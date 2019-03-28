@@ -27,5 +27,9 @@ assassin5.create_cat_food(name: "Sashimi", image_url: "https://i.pinimg.com/orig
 assassin7.create_cat_food(name: "Fancy Feast", image_url: "https://pics.drugstore.com/prodimg/93017/900.jpg", description: "For the fancy beast.")
 
 mark = assassin5.marks.create(name: "Frank", image_url: "https://i.pinimg.com/236x/4a/63/10/4a6310b5f4868d394aff9eb81a2a4645--frank-sinatra-mugshot-celebrity-mugshots.jpg", description: "a singer")
+
+mark = assassin5.marks.create(name: "bob", image_url: "https://yt3.ggpht.com/a-/AAuE7mC75lyDOGkH_0L4_ZR6F4bfGviFjsMZIGa22w=s900-mo-c-c0xffffffff-rj-k-no", description: "he paints to good")
+
+mark = assassin5.marks.create(name: "Mr.Rogers", image_url: "https://dwzwq1zlgpr34rpg91aveun6-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/mister_rogers_feature_2_1050x700.jpg", description: "a neighborhood guy")
 # mark.create_cat(name: "fluffy", image_url: "https://ichef.bbci.co.uk/images/ic/720x405/p0517py6.jpg", description: "very fluffy")
 # mark.save
