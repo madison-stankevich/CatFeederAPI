@@ -20,6 +20,7 @@ class Api::V1::MarksController < ApplicationController
   end
 
   def destroy
+    @mark.cat.destroy
     @mark.destroy
   end
 
