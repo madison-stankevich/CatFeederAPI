@@ -19,7 +19,7 @@ class Api::V1::MarksController < ApplicationController
     render json: @mark
   end
 
-  def destroy
+  def delete
     @mark.cat.destroy
     @mark.destroy
   end
