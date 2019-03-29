@@ -11,7 +11,7 @@ class Mark < ApplicationRecord
 
   def assign_random_cat
     if !self.cat
-      self.create_cat(image_url: self.catImages.sample, name: self.catName, description: self.catDescription)
+      self.create_cat(image_url: self.catImages.sample, name: self.catName, description: self.catDescriptions.sample)
     end
   end
 
@@ -38,8 +38,23 @@ class Mark < ApplicationRecord
     "https://cdn.pixabay.com/photo/2014/08/03/00/51/kitten-408798__480.jpg"]
   end
 
-  def catDescription
-    return Faker::Quote.most_interesting_man_in_the_world
+  def catDescriptions
+    return ["Putting the ‘fur’ in fervent.",
+    "You can’t keep a good cat down, and this feline is no exception! He is a handsome red orange tabby cat who recently lost one of his hind legs. This doesn’t stop him from leaping into laps, enjoying snuggle time, or from commandeering dog beds (and treats) though! This sweet boy is about three years old and has adjusted well to his tripod status. He is full of hidden treasures and will steal your heart. He loves to cuddle, enjoys the company of other cats, and has an adventurous personality.",
+    "This little guy is about a year old and super friendly. His favorite pastimes include chasing wand toys and laser pointers, playing with enthusiasm, snuggling, palling around with other cats, and showing off for belly rubs. He is a handsome, affectionate cat who can’t wait to meet his special someone.",
+    "This three-year-old fluffy girl, is the kitty you’ve been searching for! The perfect combination of affectionate and independent, you’ll instantly fall for her sweet face and lovable personality. Feed this lovable feline and find the love of your life!",
+    "This cutie cat is a lover of long walks, play time, prime rib bones, and BBQ.  She is a sweetheart; loves to cuddle; hates to sleep alone; loves floor time; plays gently with her toys; and is content laying on his bed or the couch. She is definitely a snuggler!",
+    "This feisty cat will knock things over until she has been fed. Might continue to knock things over after being fed. Depends on the day. She is a diva.",
+    "Endless amounts of fun and hairballs.",
+    "A mewment like this,
+
+    Some kittens wait a lifetime,
+
+    For a mewment like this,
+
+    Some kittens wait forever, for that one special hiss.",
+    "This kitty has the power of “purr-suasion.”",
+    "Highly treat-motivated. Dislikes children and hipsters."]
   end
 
   def catName
