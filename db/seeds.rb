@@ -21,7 +21,7 @@ assassin7 = Assassin.create(name: "James Bond", image_url: "https://images-i.jpi
 
 assassin1.create_cat_food(name: "Friskies", image_url: "https://www.dollargeneral.com/media/catalog/product/cache/image/700x700/e9c3970ab036de70892d86c6d221abfe/d/e/default_00050000015474_cl.jpg", description: "Seafood Sensations")
 assassin2.create_cat_food(name: "Canned Tuna", image_url: "http://static1.squarespace.com/static/596fb734c534a5fa937b7e75/5ab0164003ce6497ede5c48a/5aa9b6cf71c10b19376b5122/1521071850333/FP222_Tuna+Can.jpg", description: "Chicken of the sea.")
-assassin3.create_cat_food(name: "Cold Pizza", image_url: "https://www.saintclarefestival.net/wp-content/uploads/2018/05/Google-Reuse-Unknown-Cheese-Pizza-Slice.jpg", description: "Eeveryone loves it.")
+assassin3.create_cat_food(name: "Cold Pizza", image_url: "https://www.saintclarefestival.net/wp-content/uploads/2018/05/Google-Reuse-Unknown-Cheese-Pizza-Slice.jpg", description: "Everyone loves it.")
 assassin4.create_cat_food(name: "Meow Mix", image_url: "https://images-na.ssl-images-amazon.com/images/I/71YURG2o%2BdL._SX425_.jpg", description: "Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow.")
 assassin5.create_cat_food(name: "Sashimi", image_url: "https://i.pinimg.com/originals/da/a5/5b/daa55b5a14d5223582aef6cc88c58fd1.jpg", description: "Uncooked salmon.")
 assassin7.create_cat_food(name: "Fancy Feast", image_url: "https://pics.drugstore.com/prodimg/93017/900.jpg", description: "For the fancy beast.")
